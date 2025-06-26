@@ -101,15 +101,9 @@ class App extends StatelessWidget {
                  SizedBox(
                    height:20 ,
                  ),
-                 CurrencyCard(name: "EURO", code: "ERU", amount: "6 589", icon: Icons.euro_rounded,isInverted: false,),
-                 Transform.translate(offset: Offset(0, -20),
-                  child: CurrencyCard(name: "Bitcoin", code: "BIT", amount: "3 349", icon: Icons.currency_bitcoin_rounded, isInverted: true,),
-                 ),
-                 Transform.translate(offset: Offset(0, -40),
-                  child: CurrencyCard(name: "Dollar", code: "USD", amount: "10 589", icon: Icons.attach_money_rounded,isInverted: false,),
-                 )
-
-
+                 CurrencyCard(name: "EURO", code: "ERU", amount: "6 589", icon: Icons.euro_rounded,isInverted: false, isTransform: false,),
+                 CurrencyCard(name: "Bitcoin", code: "BIT", amount: "3 349", icon: Icons.currency_bitcoin_rounded, isInverted: true, isTransform: true, offsetX: 0, offsetY: -20,),
+                 CurrencyCard(name: "Dollar", code: "USD", amount: "10 589", icon: Icons.attach_money_rounded,isInverted: false, isTransform: true,offsetX: 0,offsetY: -40,),
                ],
              )
          ),
