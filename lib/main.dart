@@ -13,37 +13,46 @@ class App extends StatefulWidget{
 }
 
 class _AppState extends State<App> {
-  List<int> nums =[];
 
-
-  void onClick(){
-    setState(() {
-      nums.add(nums.length);
-    });
-
-  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: TextTheme(
+          titleLarge: TextStyle(
+            color: Colors.red,
+          ),
+        ),
+      ),
       home: Scaffold(
         body: Center( 
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("click count",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.w600),
-              ),
-              for(var num in nums) Text('${num+1}'),
-              IconButton(onPressed: onClick, icon: Icon(Icons.add_box_rounded),iconSize: 40,)
+              MyLargeTitle(),
+
 
             ],
           ),
 
         ),
       ),
+    );
+  }
+}
+
+class MyLargeTitle extends StatelessWidget {
+  const MyLargeTitle({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text("my Large Title",
+    style: TextStyle(
+      fontSize: 30,
+      fontWeight: FontWeight.w600),
     );
   }
 }
