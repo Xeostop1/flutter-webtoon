@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:projets/screens/home_screen.dart';
-import 'package:projets/widgets/button.dart';
-import 'package:projets/widgets/currency_card.dart';
 
 
 void main() {
